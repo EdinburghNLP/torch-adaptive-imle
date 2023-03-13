@@ -7,7 +7,7 @@ import torch.nn as nn
 
 from torch import Tensor
 
-from l2x.maprop import perturbations
+from aaai23.maprop import perturbations
 
 from typing import Callable, Optional
 

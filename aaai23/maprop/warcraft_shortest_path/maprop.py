@@ -5,14 +5,14 @@ import torch
 
 from torch import Tensor
 
-from l2x.maprop.blackbox.losses import HammingLoss
+from aaai23.maprop.blackbox.losses import HammingLoss
 
-from l2x.maprop.warcraft_shortest_path.trainers import ShortestPathAbstractTrainer
+from aaai23.maprop.warcraft_shortest_path.trainers import ShortestPathAbstractTrainer
 
-from l2x.maprop.blackbox.dijkstra import get_solver
-from l2x.maprop.utils import maybe_parallelize
+from aaai23.maprop.blackbox.dijkstra import get_solver
+from aaai23.maprop.utils import maybe_parallelize
 
-from l2x.maprop.models import get_model
+from aaai23.maprop.models import get_model
 
 from imle.aimle import aimle
 from imle.ste import ste

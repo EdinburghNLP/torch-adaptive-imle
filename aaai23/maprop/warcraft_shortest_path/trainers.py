@@ -6,20 +6,20 @@ import time
 from abc import ABC, abstractmethod
 
 import torch
-from l2x.maprop.blackbox.losses import HammingLoss
-from l2x.maprop.blackbox.dijkstra import ShortestPath
+from aaai23.maprop.blackbox.losses import HammingLoss
+from aaai23.maprop.blackbox.dijkstra import ShortestPath
 
-from l2x.maprop.logger import Logger
-from l2x.maprop.models import get_model
-from l2x.maprop.utils import AverageMeter, optimizer_from_string, customdefaultdict
+from aaai23.maprop.logger import Logger
+from aaai23.maprop.models import get_model
+from aaai23.maprop.utils import AverageMeter, optimizer_from_string, customdefaultdict
 
-from l2x.maprop.warcraft_shortest_path import metrics
+from aaai23.maprop.warcraft_shortest_path import metrics
 
 import numpy as np
 from collections import defaultdict
 
 from torch.optim.lr_scheduler import MultiStepLR
-from l2x.maprop.warcraft_shortest_path.visualization import draw_paths_on_image
+from aaai23.maprop.warcraft_shortest_path.visualization import draw_paths_on_image
 
 
 class ShortestPathAbstractTrainer(ABC):

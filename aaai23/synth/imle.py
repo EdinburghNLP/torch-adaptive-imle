@@ -4,7 +4,7 @@
 
 import torch
 
-from l2x.synth.utils import _maybe_ctx_call
+from aaai23.synth.utils import _maybe_ctx_call
 
 
 def imle_pid(lmd, sampler, use_fw_pass_for_mu_p=True, marginals_approx=None,

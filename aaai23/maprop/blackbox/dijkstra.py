@@ -4,9 +4,9 @@ import numpy as np
 import heapq
 import torch
 from functools import partial
-from l2x.maprop.blackbox.utils import get_neighbourhood_func
+from aaai23.maprop.blackbox.utils import get_neighbourhood_func
 from collections import namedtuple
-from l2x.maprop.utils import maybe_parallelize
+from aaai23.maprop.utils import maybe_parallelize
 
 DijkstraOutput = namedtuple("DijkstraOutput", ["shortest_path", "is_unique", "transitions"])
 

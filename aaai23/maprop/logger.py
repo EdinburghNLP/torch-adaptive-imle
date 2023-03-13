@@ -5,7 +5,7 @@ from tensorboardX import SummaryWriter
 import numpy as np
 from collections import defaultdict
 
-from l2x.maprop.decorators import input_to_numpy
+from aaai23.maprop.decorators import input_to_numpy
 
 
 class Logger:

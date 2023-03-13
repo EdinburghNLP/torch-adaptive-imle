@@ -15,7 +15,7 @@ def test_cli_aimle_v1():
     env['PYTHONPATH'] = '.'
     env['WANDB_MODE'] = 'offline'
 
-    cmd_str = 'python3 ./cli/torch-cli.py -a 1 -e 1 -b 40 -k 3 -H 250 -m 350 -K 10 -r 1 -M aimle --imle-samples 1 ' \
+    cmd_str = 'python3 ./cli/l2x-cli.py -a 1 -e 1 -b 40 -k 3 -H 250 -m 350 -K 10 -r 1 -M aimle --imle-samples 1 ' \
               '--imle-noise sog --imle-input-temperature 10.0 --imle-output-temperature 10.0 --imle-lambda 1000.0 -D ' \
               '--max-iterations 10  -c models/test_aimle_v1.pt'
 
@@ -67,7 +67,7 @@ def test_cli_aimle_v2():
     env['PYTHONPATH'] = '.'
     env['WANDB_MODE'] = 'offline'
 
-    cmd_str = 'python3 ./cli/torch-cli.py -a 1 -e 1 -b 40 -k 3 -H 250 -m 350 -K 10 -r 1 -M aimle --aimle-symmetric ' \
+    cmd_str = 'python3 ./cli/l2x-cli.py -a 1 -e 1 -b 40 -k 3 -H 250 -m 350 -K 10 -r 1 -M aimle --aimle-symmetric ' \
               '--aimle-target standard --imle-samples 1 --imle-noise gumbel --imle-input-temperature 0.0 ' \
               '--imle-output-temperature 0.0 --imle-lambda 1000.0 --sst-temperature 0.1 --softsub-temperature 0.5 ' \
               '--ste-noise sog --ste-temperature 0.0 -c models/test_aimle_v2.pt --max-iterations 10 -D'

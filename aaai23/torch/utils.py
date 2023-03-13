@@ -13,7 +13,7 @@ from torch.distributions import Uniform
 
 import math
 
-from l2x.utils import pad_sequences
+from aaai23.utils import pad_sequences
 
 from typing import Optional, Tuple, Callable
 

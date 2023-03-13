@@ -15,7 +15,7 @@ def test_cli_imle_v1():
     env['PYTHONPATH'] = '.'
     env['WANDB_MODE'] = 'offline'
 
-    cmd_str = 'python3 ./cli/torch-cli.py -a 1 -e 1 -b 40 -k 3 -H 250 -m 350 -K 10 -r 1 -M imle --imle-samples 1 ' \
+    cmd_str = 'python3 ./cli/l2x-cli.py -a 1 -e 1 -b 40 -k 3 -H 250 -m 350 -K 10 -r 1 -M imle --imle-samples 1 ' \
               '--imle-noise sog --imle-input-temperature 10.0 --imle-output-temperature 10.0 --imle-lambda 1000.0 -D ' \
               '--max-iterations 10  -c models/test_imle_v1.pt'
 
@@ -67,7 +67,7 @@ def test_cli_ste_v1():
     env['PYTHONPATH'] = '.'
     env['WANDB_MODE'] = 'offline'
 
-    cmd_str = 'python3 ./cli/torch-cli.py -a 1 -e 1 -b 40 -k 3 -H 250 -m 350 -K 10 -r 1 -M ste --imle-samples 1 ' \
+    cmd_str = 'python3 ./cli/l2x-cli.py -a 1 -e 1 -b 40 -k 3 -H 250 -m 350 -K 10 -r 1 -M ste --imle-samples 1 ' \
               '--imle-noise sog --imle-input-temperature 10.0 --imle-output-temperature 10.0 --imle-lambda 1000.0 -D ' \
               '--max-iterations 10 --ste-temperature 0.0 -c models/test_ste_v1.pt'
 

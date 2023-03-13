@@ -24,9 +24,9 @@ from imle.solvers import mathias_select_k
 
 from sklearn.model_selection import train_test_split
 
-from l2x.torch.utils import set_seed, subset_precision
-from l2x.torch.modules import Model, ConcreteDistribution, SampleSubset, IMLETopK
-from l2x.utils import pad_sequences
+from aaai23.torch.utils import set_seed, subset_precision
+from aaai23.torch.modules import Model, ConcreteDistribution, SampleSubset, IMLETopK
+from aaai23.utils import pad_sequences
 
 from typing import Optional, Callable
 
@@ -229,7 +229,7 @@ def main(argv):
 
     # here we can now iterate a few times to compute statistics
     for seed in range(args.reruns):
-        wandb.init(project="beeradv-l2x", name=f'{method_name}-{seed}')
+        wandb.init(project="beeradv-aaai23", name=f'{method_name}-{seed}')
 
         wandb.config.update(args)
         wandb.config.update({'hostname': hostname, 'seed': seed})

@@ -2,9 +2,9 @@
 
 import numpy as np
 from PIL import Image, ImageDraw
-from l2x.maprop.decorators import input_to_numpy
-from l2x.maprop.blackbox.dijkstra import dijkstra
-from l2x.maprop.utils import concat_2d
+from aaai23.maprop.decorators import input_to_numpy
+from aaai23.maprop.blackbox.dijkstra import dijkstra
+from aaai23.maprop.utils import concat_2d
 
 
 @input_to_numpy

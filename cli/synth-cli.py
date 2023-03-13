@@ -14,7 +14,7 @@ from imle.aimle import aimle as my_aimle
 from imle.target import TargetDistribution, AdaptiveTargetDistribution
 from imle.noise import SumOfGammaNoiseDistribution, GumbelNoiseDistribution
 
-from l2x.synth import distributions, utils, sfe
+from aaai23.synth import distributions, utils, sfe
 
 FIGSIZE = (3.2, 2.5)
 

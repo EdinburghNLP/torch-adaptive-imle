@@ -15,7 +15,7 @@ def test_cli_dvae_v1():
     env['PYTHONPATH'] = '.'
     env['WANDB_MODE'] = 'offline'
 
-    cmd_str = 'python3 ./cli/torch-vae-cli.py --imle-samples 1 -e 1 -M imle --imle-temperature 0.0 --imle-noise none'
+    cmd_str = 'python3 ./cli/vae-cli.py --imle-samples 1 -e 1 -M imle --imle-temperature 0.0 --imle-noise none'
 
     cmd = cmd_str.split()
 

@@ -3,8 +3,8 @@
 import numpy as np
 import os
 
-from l2x.maprop.decorators import input_to_numpy
-from l2x.maprop.utils import TrainingIterator
+from aaai23.maprop.decorators import input_to_numpy
+from aaai23.maprop.utils import TrainingIterator
 
 
 def load_dataset(data_dir, use_test_set, evaluate_with_extra, normalize, use_local_path):

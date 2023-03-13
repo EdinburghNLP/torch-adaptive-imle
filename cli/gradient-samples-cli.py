@@ -15,7 +15,7 @@ from imle.aimle import aimle as aimle
 from imle.target import BaseTargetDistribution, TargetDistribution, AdaptiveTargetDistribution
 from imle.noise import BaseNoiseDistribution, SumOfGammaNoiseDistribution, GumbelNoiseDistribution
 
-from l2x.synth import distributions, utils, sfe2 as sfe
+from aaai23.synth import distributions, utils, sfe2 as sfe
 
 import argparse
 from tqdm import tqdm

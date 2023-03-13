@@ -3,7 +3,7 @@
 """Score function estimator"""
 
 import torch
-from l2x.synth.utils import _maybe_ctx_call
+from aaai23.synth.utils import _maybe_ctx_call
 
 
 def sfe(sampler, loss_f, grad_log_p):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
-from l2x.maprop.decorators import input_to_numpy, none_if_missing_arg
-from l2x.maprop.utils import all_accuracies
-from l2x.maprop.blackbox.dijkstra import dijkstra
+from aaai23.maprop.decorators import input_to_numpy, none_if_missing_arg
+from aaai23.maprop.utils import all_accuracies
+from aaai23.maprop.blackbox.dijkstra import dijkstra
 
 
 @none_if_missing_arg

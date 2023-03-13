@@ -18,8 +18,8 @@ from imle.target import TargetDistribution, AdaptiveTargetDistribution
 from imle.noise import BaseNoiseDistribution, SumOfGammaNoiseDistribution, GumbelNoiseDistribution
 from imle.solvers import mathias_select_k
 
-from l2x.torch.utils import set_seed
-from l2x.torch.dvae.modules import DiscreteVAE
+from aaai23.torch.utils import set_seed
+from aaai23.torch.dvae.modules import DiscreteVAE
 
 from torch.utils.data import DataLoader
 

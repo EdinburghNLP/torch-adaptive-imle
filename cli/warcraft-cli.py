@@ -16,15 +16,15 @@ import torch
 
 import getpass
 
-from l2x.maprop.logger import Logger
-from l2x.maprop.utils import set_seed, save_metrics_params, update_params_from_cmdline, save_settings_to_json
+from aaai23.maprop.logger import Logger
+from aaai23.maprop.utils import set_seed, save_metrics_params, update_params_from_cmdline, save_settings_to_json
 
-import l2x.maprop.warcraft_shortest_path.data_utils as warcraft_shortest_path_data
+import aaai23.maprop.warcraft_shortest_path.data_utils as warcraft_shortest_path_data
 
-from l2x.maprop.utils import load_json
+from aaai23.maprop.utils import load_json
 
-from l2x.maprop.warcraft_shortest_path.trainers import BaselineTrainer, DijkstraOnFull
-from l2x.maprop.warcraft_shortest_path.maprop import DijkstraMAP
+from aaai23.maprop.warcraft_shortest_path.trainers import BaselineTrainer, DijkstraOnFull
+from aaai23.maprop.warcraft_shortest_path.maprop import DijkstraMAP
 
 # torch.autograd.set_detect_anomaly(True)
 

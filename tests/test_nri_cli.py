@@ -15,7 +15,7 @@ def test_cli_nri_v1():
     env['PYTHONPATH'] = '.'
     env['WANDB_MODE'] = 'offline'
 
-    cmd_str = 'python3 ./cli/torch-nri-cli.py --suffix _novar_1skip_10t_1r_graph10 --timesteps 10 ' \
+    cmd_str = 'python3 ./cli/nri-cli.py --suffix _novar_1skip_10t_1r_graph10 --timesteps 10 ' \
               '--prediction_steps 9 --sst tree --symmeterize_logits True --lr 0.0001 --temp 0.5 ' \
               '--eps_for_finitediff 1.0 --cuda False --experiments_folder ' \
               '../exp_nri/nri_T=10_eps=1.0_lr=0.0001_sst=indep_temp=0.5 --use_cpp_for_sampling True ' \
