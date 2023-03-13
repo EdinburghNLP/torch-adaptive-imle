@@ -1,6 +1,8 @@
 # torch-adaptive-imle
 
-Source code for the paper [Adaptive Perturbation-Based Gradient Estimation for Discrete Latent Variable Models](https://arxiv.org/abs/2209.04862), published in the proceedings of the Thirty-Seventh AAAI Conference on Artificial Intelligence (AAAI 2023).
+Source code for the paper [Adaptive Perturbation-Based Gradient Estimation for Discrete Latent Variable Models](https://arxiv.org/abs/2209.04862), published in the proceedings of the Thirty-Seventh AAAI Conference on Artificial Intelligence (AAAI 2023) -- check out our [AAAI 2023 poster](http://data.neuralnoise.com/AIMLE_AAAI23_poster.pdf) and [slides](http://data.neuralnoise.com/AIMLE_AAAI23_slides.pdf).
+
+This work extends our popular [Implicit MLE](https://arxiv.org/abs/2106.01798) method for back-propagating though black-box combinatorial solvers such as `top-k` functions, shortest path algorithms, and maximum spanning tree algorithms -- for a friendly introduction to Implicit MLE, check [our video](https://www.youtube.com/watch?v=hb2b0K2PTxI) or [Yannic Kilcher's video](https://www.youtube.com/watch?v=W2UT8NjUqrk) on this topic.
 
 Here the `imle/` folder contains a plug-and-play library with decorators for turning arbitrary black-box combinatorial solvers into differentiable neural network layers, similar in spirit to [torch-imle](https://github.com/uclnlp/torch-imle), while `aaai23/` contains the code we used in the experiments of our AAAI 2023 paper.
 
