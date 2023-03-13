@@ -4,6 +4,32 @@ Source code for the paper [Adaptive Perturbation-Based Gradient Estimation for D
 
 Here the `imle/` folder contains a plug-and-play library with decorators for turning arbitrary black-box combinatorial solvers into differentiable neural network layers, similar in spirit to [torch-imle](https://github.com/uclnlp/torch-imle), while `aaai23/` contains the code we used in the experiments of our AAAI 2023 paper.
 
+## Using the code as a library
+
+This code extends the popular [torch-imle](https://github.com/uclnlp/torch-imle) library to adaptively select the optimal target function for the problem at hand.
+
+Sample usage:
+
+```python
+from imle.wrapper import aimle
+from imle.target import TargetDistribution, AdaptiveTargetDistribution
+from imle.noise import SumOfGammaNoiseDistribution
+
+# The initial perturbation size is set to 0.0, and automatically tuned by the model during training
+target_distribution = AdaptiveTargetDistribution(initial_alpha=1.0, initial_beta=0.0)
+
+def torch_solver(weights_batch: Tensor) -> Tensor:
+    weights_batch = weights_batch.detach().cpu().numpy()
+    # Call the combinatorial solver on the input data
+    y_batch = np.asarray([solver(w) for w in list(weights_batch)])
+    return torch.tensor(y_batch, requires_grad=False)
+
+# Transform the combinatorial solver in a differentiable neural network layer by adding a simple annotation
+@aimle(target_distribution=target_distribution)
+def imle_solver(weights_batch: Tensor) -> Tensor:
+    return torch_solver(weights_batch)
+```
+
 ## Learning to Explain
 
 Downloading the data:
