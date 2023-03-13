@@ -20,6 +20,7 @@ from imle.noise import SumOfGammaNoiseDistribution
 # The initial perturbation size is set to 0.0, and automatically tuned by the model during training
 target_distribution = AdaptiveTargetDistribution(initial_alpha=1.0, initial_beta=0.0)
 
+# This function invokes, for example, a shortest path algorithm on the inputs `weights_batch`
 def torch_solver(weights_batch: Tensor) -> Tensor:
     weights_batch = weights_batch.detach().cpu().numpy()
     # Call the combinatorial solver on the input data
