@@ -28,7 +28,7 @@ def torch_solver(weights_batch: Tensor) -> Tensor:
 
 # Transform the combinatorial solver in a differentiable neural network layer by adding a simple decorator
 @aimle(target_distribution=target_distribution)
-def imle_solver(weights_batch: Tensor) -> Tensor:
+def differentiable_solver(weights_batch: Tensor) -> Tensor:
     return torch_solver(weights_batch)
 ```
 
