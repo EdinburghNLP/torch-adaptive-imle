@@ -14,7 +14,7 @@ Sample usage:
 
 ```python
 from imle.wrapper import aimle
-from imle.target import TargetDistribution, AdaptiveTargetDistribution
+from imle.target import AdaptiveTargetDistribution
 
 # The initial perturbation size is set to 0.0, and automatically tuned by the model during training
 target_distribution = AdaptiveTargetDistribution(initial_alpha=1.0, initial_beta=0.0)
