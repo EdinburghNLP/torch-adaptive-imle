@@ -171,10 +171,12 @@ def aimle(function: Optional[Callable[[Tensor], Tensor]] = None,
 
                 # [BATCH_SIZE * N_TOTAL_SAMPLES, ...]
 
-                # z'_R = MAP(θ'_R + ε)
-                z_r_2d = function(perturbed_target_theta_r_2d)
-                # z'_L = MAP(θ'_L + ε)
-                z_l_2d = function(perturbed_target_theta_l_2d)
+                with torch.inference_mode():
+                    # z'_R = MAP(θ'_R + ε)
+                    z_r_2d = function(perturbed_target_theta_r_2d)
+
+                    # z'_L = MAP(θ'_L + ε)
+                    z_l_2d = function(perturbed_target_theta_l_2d)
 
                 # [BATCH_SIZE, N_TOTAL_SAMPLES, ...]
                 z_r_3d = z_r_2d.view(noise_shape)

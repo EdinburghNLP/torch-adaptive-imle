@@ -130,6 +130,7 @@ dmypy.json
 snippets/
 data/
 models/*.pt
+exp_nri/nri_*
 mnist-data/
 .idea/
 wandb/

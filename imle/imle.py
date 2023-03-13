@@ -164,9 +164,10 @@ def imle(function: Optional[Callable[[Tensor], Tensor]] = None,
                 # [BATCH_SIZE * N_TOTAL_SAMPLES, ...]
                 perturbed_target_theta_2d = perturbed_target_theta_3d.view(dy_shape)
 
-                # z' = MAP(θ' + ε)
-                # [BATCH_SIZE * N_TOTAL_SAMPLES, ...]
-                z_prime_2d = function(perturbed_target_theta_2d)
+                with torch.inference_mode():
+                    # z' = MAP(θ' + ε)
+                    # [BATCH_SIZE * N_TOTAL_SAMPLES, ...]
+                    z_prime_2d = function(perturbed_target_theta_2d)
 
                 # [BATCH_SIZE, N_TOTAL_SAMPLES, ...]
                 z_prime_3d = z_prime_2d.view(noise_shape)
