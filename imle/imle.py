@@ -148,8 +148,8 @@ def imle(function: Optional[Callable[[Tensor], Tensor]] = None,
 
                 # [BATCH_SIZE * N_TOTAL_SAMPLES, ...]
                 theta_2d = theta.view(batch_size, 1, -1).repeat(1, nb_total_samples, 1).view(dy_shape)
-                # θ' = θ - λ dy
 
+                # θ' = θ - λ dy
                 target_theta_2d = target_distribution.params(theta_2d, dy, _is_minimization=_is_minimization)
 
                 # [BATCH_SIZE, N_TOTAL_SAMPLES, ...]
