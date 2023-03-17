@@ -1,6 +1,6 @@
 # torch-adaptive-imle
 
-Source code for the paper [Adaptive Perturbation-Based Gradient Estimation for Discrete Latent Variable Models](https://arxiv.org/abs/2209.04862), published in the proceedings of the Thirty-Seventh AAAI Conference on Artificial Intelligence (AAAI 2023) -- check out our [AAAI 2023 poster](http://data.neuralnoise.com/AIMLE_AAAI23_poster.pdf) and [slides](http://data.neuralnoise.com/AIMLE_AAAI23_slides.pdf).
+Source code for the paper [Adaptive Perturbation-Based Gradient Estimation for Discrete Latent Variable Models](https://arxiv.org/abs/2209.04862), published in the proceedings of the Thirty-Seventh AAAI Conference on Artificial Intelligence (AAAI 2023) -- check out our [AAAI 2023 poster](http://data.neuralnoise.com/AIMLE_AAAI23_poster.pdf), [slides](http://data.neuralnoise.com/AIMLE_AAAI23_slides.pdf), and [AAAI 2023 presentation](https://youtu.be/94MTwQlXrxg).
 
 This work extends our [Implicit MLE](https://arxiv.org/abs/2106.01798) method for back-propagating though black-box combinatorial solvers such as `top-k` functions, shortest path algorithms, and maximum spanning tree algorithms -- for a friendly introduction to Implicit MLE, check [our video](https://www.youtube.com/watch?v=hb2b0K2PTxI) or [Yannic Kilcher's video](https://www.youtube.com/watch?v=W2UT8NjUqrk) on this topic.
 
@@ -13,7 +13,10 @@ This code extends the popular [torch-imle](https://github.com/uclnlp/torch-imle)
 Sample usage:
 
 ```python
-from imle.wrapper import aimle
+import torch
+from torch import Tensor
+import numpy as np
+from imle.aimle import aimle
 from imle.target import AdaptiveTargetDistribution
 
 # The initial perturbation size is set to 0.0, and automatically tuned by the model during training
