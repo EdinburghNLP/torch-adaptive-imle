@@ -25,7 +25,7 @@ target_distribution = AdaptiveTargetDistribution(initial_alpha=1.0, initial_beta
 # This function invokes, for example, a shortest path algorithm on the inputs `weights_batch`
 def torch_solver(weights_batch: Tensor) -> Tensor:
     weights_batch = weights_batch.detach().cpu().numpy()
-    # Call the combinatorial solver on the input data
+    # Call the combinatorial solver -- for example, a shortest path algorithm -- on the input data
     y_batch = np.asarray([solver(w) for w in list(weights_batch)])
     return torch.tensor(y_batch, requires_grad=False)
 
