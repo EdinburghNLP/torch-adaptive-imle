@@ -23,7 +23,7 @@ from imle.target import AdaptiveTargetDistribution
 target_distribution = AdaptiveTargetDistribution(initial_alpha=1.0, initial_beta=0.0)
 
 # This function invokes, for example, a shortest path algorithm on the inputs `weights_batch`
-def torch_solver(weights_batch: Tensor) -> Tensor:
+def batched_solver(weights_batch: Tensor) -> Tensor:
     weights_batch = weights_batch.detach().cpu().numpy()
     # Call the combinatorial solver -- for example, a shortest path algorithm -- on the input data
     y_batch = np.asarray([solver(w) for w in list(weights_batch)])
@@ -32,7 +32,7 @@ def torch_solver(weights_batch: Tensor) -> Tensor:
 # Transform the combinatorial solver in a differentiable neural network layer by adding a simple decorator
 @aimle(target_distribution=target_distribution)
 def differentiable_solver(weights_batch: Tensor) -> Tensor:
-    return torch_solver(weights_batch)
+    return batched_solver(weights_batch)
 ```
 
 ## Learning to Explain
