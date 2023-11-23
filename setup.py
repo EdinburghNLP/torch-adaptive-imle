@@ -22,7 +22,7 @@ setup(
     ],
     keywords="torch, deep learning, machine learning, gradient estimation",
     packages=find_packages(),
-    python_requires=">=3.9, <4",
+    python_requires=">=3.8, <4",
     install_requires=["torch"],
     project_urls={
         "Bug Reports": "https://github.com/EdinburghNLP/torch-adaptive-imle/issues",
